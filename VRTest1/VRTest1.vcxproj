@@ -135,23 +135,39 @@ SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
   <ItemGroup>
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="Cube.cpp" />
+    <ClCompile Include="Model.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Pos.cpp" />
+    <ClCompile Include="Pos2D.cpp" />
     <ClCompile Include="RenderableObject.cpp" />
     <ClCompile Include="RenderNode.cpp" />
     <ClCompile Include="RenderStack.cpp" />
     <ClCompile Include="Sky.cpp" />
+    <ClCompile Include="Vertex.cpp" />
+    <ClCompile Include="Vertex3D.cpp" />
+    <ClCompile Include="VertexNode.cpp" />
+    <ClCompile Include="VertexNode3D.cpp" />
+    <ClCompile Include="VertexStack.cpp" />
+    <ClCompile Include="VertexStack3D.cpp" />
     <ClCompile Include="VRTest1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Color.h" />
     <ClInclude Include="Cube.h" />
+    <ClInclude Include="Model.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Pos.h" />
+    <ClInclude Include="Pos2D.h" />
     <ClInclude Include="RenderableObject.h" />
     <ClInclude Include="RenderNode.h" />
     <ClInclude Include="RenderStack.h" />
     <ClInclude Include="Sky.h" />
+    <ClInclude Include="Vertex.h" />
+    <ClInclude Include="Vertex3D.h" />
+    <ClInclude Include="VertexNode.h" />
+    <ClInclude Include="VertexNode3D.h" />
+    <ClInclude Include="VertexStack.h" />
+    <ClInclude Include="VertexStack3D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

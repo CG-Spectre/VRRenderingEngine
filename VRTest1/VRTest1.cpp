@@ -12,6 +12,7 @@
 #include "Color.h"
 #include "RenderNode.h"
 #include "RenderStack.h"
+#include "Model.h"
 
 int main(int argc, char* argv[]) {
     Pos pos(0, 0, 0, 0, 0, 0);
@@ -25,7 +26,9 @@ int main(int argc, char* argv[]) {
     Cube cube(&cubePos, 2, &cubeColor);
     RenderNode cubenode(&cube);
     RenderStack renderStack(&skyNode);
-    renderStack.add(&cubenode);
+    Model cubeModel = Model(&cubePos, 2, &cubeColor, "prism");
+    RenderNode modelnode(&cubeModel);
+    renderStack.add(&modelnode);
     // Initialize SDL
     if (SDL_Init(SDL_INIT_VIDEO) != 0) {
         SDL_Log("Unable to initialize SDL: %s", SDL_GetError());

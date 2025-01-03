@@ -11,6 +11,7 @@ class Cube : public RenderableObject
 		float* getSize();
 		int getObjectType() override;
 		void render(SDL_Renderer* renderer, Player* player) override;
+		void drawSecondCube(SDL_Renderer* renderer, Color* color);
 	private:
 		float size;
 };
