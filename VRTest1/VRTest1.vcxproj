@@ -135,6 +135,9 @@ SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
   <ItemGroup>
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="Cube.cpp" />
+    <ClCompile Include="Face2.cpp" />
+    <ClCompile Include="FaceNode.cpp" />
+    <ClCompile Include="FaceStack.cpp" />
     <ClCompile Include="Model.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Pos.cpp" />
@@ -142,11 +145,13 @@ SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     <ClCompile Include="RenderableObject.cpp" />
     <ClCompile Include="RenderNode.cpp" />
     <ClCompile Include="RenderStack.cpp" />
+    <ClCompile Include="SDL3DHelper.cpp" />
     <ClCompile Include="Sky.cpp" />
     <ClCompile Include="Vertex.cpp" />
     <ClCompile Include="Vertex3D.cpp" />
     <ClCompile Include="VertexNode.cpp" />
     <ClCompile Include="VertexNode3D.cpp" />
+    <ClCompile Include="VertexNode3DNode.cpp" />
     <ClCompile Include="VertexStack.cpp" />
     <ClCompile Include="VertexStack3D.cpp" />
     <ClCompile Include="VRTest1.cpp" />
@@ -154,6 +159,9 @@ SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
   <ItemGroup>
     <ClInclude Include="Color.h" />
     <ClInclude Include="Cube.h" />
+    <ClInclude Include="Face2.h" />
+    <ClInclude Include="FaceNode.h" />
+    <ClInclude Include="FaceStack.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Pos.h" />
@@ -161,11 +169,13 @@ SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     <ClInclude Include="RenderableObject.h" />
     <ClInclude Include="RenderNode.h" />
     <ClInclude Include="RenderStack.h" />
+    <ClInclude Include="SDL3DHelper.h" />
     <ClInclude Include="Sky.h" />
     <ClInclude Include="Vertex.h" />
     <ClInclude Include="Vertex3D.h" />
     <ClInclude Include="VertexNode.h" />
     <ClInclude Include="VertexNode3D.h" />
+    <ClInclude Include="VertexNode3DNode.h" />
     <ClInclude Include="VertexStack.h" />
     <ClInclude Include="VertexStack3D.h" />
   </ItemGroup>

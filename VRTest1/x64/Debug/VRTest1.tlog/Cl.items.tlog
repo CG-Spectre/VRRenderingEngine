@@ -1,5 +1,8 @@
 C:\Users\aidan\source\repos\VRTest1\VRTest1\Color.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\Color.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\Cube.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\Cube.obj
+C:\Users\aidan\source\repos\VRTest1\VRTest1\Face2.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\Face2.obj
+C:\Users\aidan\source\repos\VRTest1\VRTest1\FaceNode.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\FaceNode.obj
+C:\Users\aidan\source\repos\VRTest1\VRTest1\FaceStack.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\FaceStack.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\Model.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\Model.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\Player.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\Player.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\Pos.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\Pos.obj
@@ -7,11 +10,13 @@ C:\Users\aidan\source\repos\VRTest1\VRTest1\Pos2D.cpp;C:\Users\aidan\source\repo
 C:\Users\aidan\source\repos\VRTest1\VRTest1\RenderableObject.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\RenderableObject.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\RenderNode.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\RenderNode.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\RenderStack.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\RenderStack.obj
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\SDL3DHelper.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\Sky.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\Sky.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\Vertex.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\Vertex.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\Vertex3D.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\Vertex3D.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\VertexNode.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\VertexNode.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\VertexNode3D.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\VertexNode3D.obj
+C:\Users\aidan\source\repos\VRTest1\VRTest1\VertexNode3DNode.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\VertexNode3DNode.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\VertexStack.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\VertexStack.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\VertexStack3D.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\VertexStack3D.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\VRTest1.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\VRTest1.obj

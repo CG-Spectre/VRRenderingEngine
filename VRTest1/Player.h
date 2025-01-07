@@ -4,8 +4,9 @@ class Player
 {
 	public:
 		Player(Pos* pos, const char* name);
-		Pos* pos;
+		Pos* getPos();
 	private:
 		const char* name;
+		Pos pos;
 };
 

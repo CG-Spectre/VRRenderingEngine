@@ -30,4 +30,8 @@ Vertex* Vertex3D::getVertex2d() {
 	return &this->vertex2d;
 }
 
+void Vertex3D::addFaceConnection(int vertexId) {
+	this->pendingFaceConnections.push_back(vertexId);
+}
+
 

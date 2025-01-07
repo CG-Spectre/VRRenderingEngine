@@ -3,6 +3,7 @@
 #include "Color.h"
 #include "VertexStack.h"
 #include "VertexStack3D.h"
+#include "FaceStack.h"
 #include <string>
 class Model : public RenderableObject
 {
@@ -15,5 +16,6 @@ class Model : public RenderableObject
 		float size;
 		Color* color;
 		VertexStack3D data3d;
+		FaceStack facesData;
 };
 

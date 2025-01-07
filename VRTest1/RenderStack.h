@@ -1,5 +1,5 @@
 #pragma once
-#include "RenderNode.h";
+#include "RenderNode.h"
 class RenderStack
 {
 	public:
