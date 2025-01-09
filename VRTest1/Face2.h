@@ -9,6 +9,7 @@ class Face2
 		void remove(VertexNode3DNode* node);
 		VertexNode3DNode* getFront();
 		VertexNode3DNode* getLast();
+		float average;
 	private:
 		VertexNode3DNode* front;
 		VertexNode3DNode* last;

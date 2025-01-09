@@ -70,3 +70,8 @@ float* Pos::getRoll()
 {
 	return &this->roll;
 }
+
+Vector3 Pos::getNormalizedRotation()
+{
+	return Vector3(yaw, pitch, roll).getNormalized();
+}

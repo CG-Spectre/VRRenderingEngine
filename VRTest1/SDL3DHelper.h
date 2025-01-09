@@ -4,6 +4,7 @@
 #include "VertexStack.h"
 #include "VertexStack3D.h"
 #include "FaceStack.h";
+#include "RenderStack.h"
 class SDL3DHelper
 {
 	public:
@@ -17,7 +18,9 @@ class SDL3DHelper
 		static void renderDrawLine(SDL_Renderer* renderer, Pos2D from, Pos2D to);
 		
 		static FaceStack getFaces(VertexStack3D* vertices);
+		static void processLightInformation(SDL_Renderer* renderer, RenderableObject* object, Player* player, Pos* lightPos);
 		static void renderFillFace(SDL_Renderer* renderer, VertexNode3DNode front);
+		static void convertWithinBounds(SDL_Point* p1, SDL_Point* p2, SDL_Point* p3, SDL_Point* p4);
 		static bool isWithinBounds(int x, int y);
 		//static void renderFillFace(SDL_Renderer* renderer, VertexStack vertices);
 		static void drawLineCustom(SDL_Renderer* renderer, int x1, int y1, int x2, int y2);

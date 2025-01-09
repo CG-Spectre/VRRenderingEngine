@@ -3,12 +3,12 @@
 
 int Sky::getObjectType()
 {
-	return 1;
+	return 0;
 }
 
 Sky::Sky(Color* color) : color(color)
 {
-
+	this->name = "sky";
 }
 
 void Sky::render(SDL_Renderer* renderer, Player* player)

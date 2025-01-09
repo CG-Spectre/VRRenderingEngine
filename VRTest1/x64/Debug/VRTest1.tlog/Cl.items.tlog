@@ -3,6 +3,7 @@ C:\Users\aidan\source\repos\VRTest1\VRTest1\Cube.cpp;C:\Users\aidan\source\repos
 C:\Users\aidan\source\repos\VRTest1\VRTest1\Face2.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\Face2.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\FaceNode.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\FaceNode.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\FaceStack.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\FaceStack.obj
+C:\Users\aidan\source\repos\VRTest1\VRTest1\LightRaySource.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\LightRaySource.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\Model.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\Model.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\Player.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\Player.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\Pos.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\Pos.obj
@@ -12,6 +13,7 @@ C:\Users\aidan\source\repos\VRTest1\VRTest1\RenderNode.cpp;C:\Users\aidan\source
 C:\Users\aidan\source\repos\VRTest1\VRTest1\RenderStack.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\RenderStack.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\SDL3DHelper.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\Sky.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\Sky.obj
+C:\Users\aidan\source\repos\VRTest1\VRTest1\Vector3.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\Vector3.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\Vertex.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\Vertex.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\Vertex3D.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\Vertex3D.obj
 C:\Users\aidan\source\repos\VRTest1\VRTest1\VertexNode.cpp;C:\Users\aidan\source\repos\VRTest1\VRTest1\x64\Debug\VertexNode.obj

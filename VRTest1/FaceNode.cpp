@@ -14,7 +14,17 @@ void FaceNode::setNext(FaceNode* next) {
 	this->next = next;
 }
 
+void FaceNode::setPrevious(FaceNode* prev)
+{
+	this->previous = prev;
+}
+
 FaceNode* FaceNode::getNext()
 {
 	return this->next;
+}
+
+FaceNode* FaceNode::getPrevious()
+{
+	return this->previous;
 }

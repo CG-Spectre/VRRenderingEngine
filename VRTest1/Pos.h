@@ -1,4 +1,5 @@
 #pragma once
+#include "Vector3.h"
 class Pos
 {
 	public:
@@ -18,6 +19,7 @@ class Pos
 		float* getYaw();
 		float* getPitch();
 		float* getRoll();
+		Vector3 getNormalizedRotation();
 	private:
 		float x;
 		float y;

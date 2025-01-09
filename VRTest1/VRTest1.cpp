@@ -14,6 +14,7 @@
 #include "RenderStack.h"
 #include "Model.h"
 #include "SDL3DHelper.h"
+#include "LightRaySource.h";
 #include <cmath>
 #include <chrono>
 
@@ -31,13 +32,15 @@ int main(int argc, char* argv[]) {
     Cube cube(&cubePos, 1, &cubeColor);
     RenderNode cubenode(&cube);
     RenderStack renderStack(&skyNode);
-    Model prismModel = Model(&cubePos, 2, &cubeColor, "prism");
-    Model cubeModel = Model(&prismPos, 2, &cubeColor, "cube");
+    Model prismModel = Model("cube", & cubePos, 2, &cubeColor, "prism");
+    Model cubeModel = Model("triangularPrism", &prismPos, 2, &cubeColor, "cube");
     RenderNode modelnode(&cubeModel);
     RenderNode modelnode2(&prismModel);
+    LightRaySource light(Pos(0, 5, 0.0));
     
     renderStack.add(&modelnode);
     renderStack.add(&modelnode2);
+    renderStack.add(new RenderNode(&light));
     // Initialize SDL
     if (SDL_Init(SDL_INIT_VIDEO) != 0) {
         SDL_Log("Unable to initialize SDL: %s", SDL_GetError());
@@ -215,7 +218,12 @@ int main(int argc, char* argv[]) {
         RenderNode* currentNode = renderStack.getFront();
         bool isNext = true;
         while (isNext) {
-            currentNode->getInfo()->render(renderer, &player);
+            if (currentNode->getInfo()->getObjectType() == 2) {
+                ((LightRaySource*)currentNode->getInfo())->render(renderer, &player, &renderStack);
+            }
+            else {
+                currentNode->getInfo()->render(renderer, &player);
+            }
             if (currentNode->getLink() == nullptr) {
                 isNext = false;
                 continue;

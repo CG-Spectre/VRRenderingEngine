@@ -12,6 +12,7 @@ void FaceStack::add(FaceNode* face)
 		return;
 	}
 	last->setNext(face);
+	face->setPrevious(last);
 	last = last->getNext();
 }
 
@@ -23,4 +24,10 @@ FaceNode* FaceStack::getLast()
 FaceNode* FaceStack::getFront()
 {
 	return front;
+}
+
+void FaceStack::setFront(FaceNode* node)
+{
+	this->front->setPrevious(node);
+	this->front = node;
 }

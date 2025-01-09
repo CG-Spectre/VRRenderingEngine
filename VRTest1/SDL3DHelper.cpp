@@ -3,12 +3,14 @@
 #include <iostream>
 #include <algorithm>
 #include "VertexStack3D.h"
+#include "Player.h"
 #include <thread>
+
 
 int SDL3DHelper::SCREEN_HEIGHT = 0;
 int SDL3DHelper::SCREEN_WIDTH = 0;
 float SDL3DHelper::FOCAL_LENGTH = 1000.0;
-Uint16 SDL3DHelper::SDL_DELAY = 16;
+Uint16 SDL3DHelper::SDL_DELAY = 1;
 Uint16 SDL3DHelper::SDL_SCALE = 100;
 
 void SDL3DHelper::convertPos(Pos2D* pos)
@@ -34,6 +36,13 @@ void SDL3DHelper::renderDrawLine(SDL_Renderer* renderer, Pos2D from, Pos2D to)
 FaceStack SDL3DHelper::getFaces(VertexStack3D* vertices) {
 	FaceStack stack;
 	return stack;
+}
+
+void SDL3DHelper::processLightInformation(SDL_Renderer* renderer, RenderableObject* object, Player* player, Pos* lightPos) {
+	lightPos->setYaw(5);
+	lightPos->setPitch(5);
+	lightPos->setRoll(5);
+	std::cout << lightPos->getNormalizedRotation().x << std::endl;
 }
 
 void SDL3DHelper::renderFillFace(SDL_Renderer* renderer, /*VertexStack vertices*/ VertexNode3DNode front)
@@ -96,11 +105,13 @@ void SDL3DHelper::renderFillFace(SDL_Renderer* renderer, /*VertexStack vertices*
 		SDL_Point p2 = { SDL3DHelper::convertPosR(*nextVertex1->getInfo()->getInfo()->getVertex2d()->getPos()).getX(), SDL3DHelper::convertPosR(*nextVertex1->getInfo()->getInfo()->getVertex2d()->getPos()).getY() };
 		SDL_Point p3 = { SDL3DHelper::convertPosR(*currentVertex2->getInfo()->getInfo()->getVertex2d()->getPos()).getX(), SDL3DHelper::convertPosR(*currentVertex2->getInfo()->getInfo()->getVertex2d()->getPos()).getY() };
 		SDL_Point p4 = { SDL3DHelper::convertPosR(*nextVertex2->getInfo()->getInfo()->getVertex2d()->getPos()).getX(), SDL3DHelper::convertPosR(*nextVertex2->getInfo()->getInfo()->getVertex2d()->getPos()).getY() };
-
-		if ((p1.x != p3.x || p1.y != p3.y) && (isWithinBounds(p1.x, p1.y) && isWithinBounds(p2.x, p2.y) && isWithinBounds(p3.x, p3.y))) {
+		
+		if ((p1.x != p3.x || p1.y != p3.y)/* && (isWithinBounds(p1.x, p1.y) && isWithinBounds(p2.x, p2.y) && isWithinBounds(p3.x, p3.y))*/) {
+			convertWithinBounds(&p1, &p2, &p3, &p4);
 			SDL3DHelper::fillTriangle(renderer, p1, p2, p3);
 		}
-		if ((p2.x != p4.x || p2.y != p4.y) && (isWithinBounds(p4.x, p4.y) && isWithinBounds(p2.x, p2.y) && isWithinBounds(p3.x, p3.y))) {
+		if ((p2.x != p4.x || p2.y != p4.y)/* && (isWithinBounds(p4.x, p4.y) && isWithinBounds(p2.x, p2.y) && isWithinBounds(p3.x, p3.y))*/) {
+			convertWithinBounds(&p1, &p2, &p3, &p4);
 			SDL3DHelper::fillTriangle(renderer, p4, p2, p3);
 		}
 		currentVertex1 = nextVertex1;
@@ -111,6 +122,21 @@ void SDL3DHelper::renderFillFace(SDL_Renderer* renderer, /*VertexStack vertices*
 			break;
 		}
 	}
+}
+
+void SDL3DHelper::convertWithinBounds(SDL_Point* p1, SDL_Point* p2, SDL_Point* p3, SDL_Point* p4) {
+	int leftBounds = 0;
+	int rightBounds = SCREEN_WIDTH;
+	int topBounds = 0;
+	int bottomBounds = SCREEN_HEIGHT;
+	p1->x = std::min(std::max(leftBounds, p1->x), rightBounds);
+	p2->x = std::min(std::max(leftBounds, p2->x), rightBounds);
+	p3->x = std::min(std::max(leftBounds, p3->x), rightBounds);
+	p4->x = std::min(std::max(leftBounds, p4->x), rightBounds);
+	p1->y = std::min(std::max(topBounds, p1->y), bottomBounds);
+	p2->y = std::min(std::max(topBounds, p2->y), bottomBounds);
+	p3->y = std::min(std::max(topBounds, p3->y), bottomBounds);
+	p4->y = std::min(std::max(topBounds, p4->y), bottomBounds);
 }
 
 bool SDL3DHelper::isWithinBounds(int x, int y) {

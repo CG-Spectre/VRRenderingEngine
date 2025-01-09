@@ -16,7 +16,7 @@ class Vertex3D
 		Pos* getPos();
 		Vertex* getVertex2d();
 		void addFaceConnection(int vertexId);
-		
+		float virtualZ;
 	private:
 		Pos pos;
 		Vertex vertex2d;

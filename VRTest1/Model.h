@@ -9,7 +9,9 @@ class Model : public RenderableObject
 {
 	public:
 		void render(SDL_Renderer* renderer, Player* player) override;
-		Model(Pos* pos, float size, Color* color, const char* modelname);
+		Model(const char* objectname, Pos* pos, float size, Color* color, const char* modelname);
+		int getObjectType() override;
+		FaceStack* getFaces();
 	private:
 		std::vector<std::string> splitString(const std::string& str, const char* delimiter);
 		Pos* pos;
