@@ -8,7 +8,9 @@ class FaceStack
 		FaceNode* getLast();
 		FaceNode* getFront();
 		void setFront(FaceNode* node);
+		int getSize();
 	private:
+		int size = 0;
 		FaceNode* front;
 		FaceNode* last;
 };

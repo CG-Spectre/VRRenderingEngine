@@ -5,6 +5,8 @@
 #include "VertexStack3D.h"
 #include "FaceStack.h";
 #include "RenderStack.h"
+#include "Model.h";
+#include <optional>
 class SDL3DHelper
 {
 	public:
@@ -16,8 +18,20 @@ class SDL3DHelper
 		static void convertPos(Pos2D* pos);
 		static Pos2D convertPosR(Pos2D pos);
 		static void renderDrawLine(SDL_Renderer* renderer, Pos2D from, Pos2D to);
+
+		static void renderDrawPoint(SDL_Renderer* renderer, Pos2D point);
+
+		static void renderDrawCircle(SDL_Renderer* renderer, int centerX, int centerY, int radius);
+
+		static void renderDrawCircleFill(SDL_Renderer* renderer, int centerX, int centerY, int radius);
+
+		static void renderFillElipse3DInBounds(SDL_Renderer* renderer, Player* player, Vector3 p1, Vector3 p2, Vector3 p3);
 		
+		static Pos2D convert3d2d(Vector3* point, Player* player);
+
 		static FaceStack getFaces(VertexStack3D* vertices);
+		static Vector3 getIntersection(Vector3 planePoint, Vector3 planeNormal, Vector3 rayPoint, Vector3 rayNormal);
+		static bool isInside(FaceNode* face, Vector3 point, Model* model, Player* player);
 		static void processLightInformation(SDL_Renderer* renderer, RenderableObject* object, Player* player, Pos* lightPos);
 		static void renderFillFace(SDL_Renderer* renderer, VertexNode3DNode front);
 		static void convertWithinBounds(SDL_Point* p1, SDL_Point* p2, SDL_Point* p3, SDL_Point* p4);

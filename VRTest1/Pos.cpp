@@ -1,5 +1,6 @@
 #include "Pos.h"
 #include <cstddef>
+#include "Quaternion.h"
 
 Pos::Pos(float* x, float* y, float* z, float* yaw, float* pitch, float* roll) : x(*x), y(*y), z(*z), pitch(*pitch), roll(*roll), yaw(*yaw) {
 	
@@ -71,7 +72,11 @@ float* Pos::getRoll()
 	return &this->roll;
 }
 
+Vector3 Pos::getAsVector3() {
+	return Vector3(x, y, z);
+}
+
 Vector3 Pos::getNormalizedRotation()
 {
-	return Vector3(yaw, pitch, roll).getNormalized();
+	return Quaternion(yaw, pitch, roll).getNormalizedVector();
 }

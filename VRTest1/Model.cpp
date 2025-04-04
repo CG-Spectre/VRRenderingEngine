@@ -46,6 +46,7 @@ void Model::render(SDL_Renderer* renderer, Player* player)
     float cosyaw = cos(playeryaw * (M_PI / 180));
     float sinyaw = sin(playeryaw * (M_PI / 180));
     while (currentNode != nullptr) {
+        //std::cout << *currentNode->getInfo()->getPos()->getX() + *this->pos->getX() << ", " << *currentNode->getInfo()->getPos()->getY() + *this->pos->getY() << ", " << *currentNode->getInfo()->getPos()->getZ() + *this->pos->getZ() << std::endl;
         float x = *currentNode->getInfo()->getPos()->getX() + *this->pos->getX() - playerx;
         float y = *currentNode->getInfo()->getPos()->getY() + *this->pos->getY() - playery;
         float z = *currentNode->getInfo()->getPos()->getZ() + *this->pos->getZ() - playerz;
@@ -68,6 +69,14 @@ void Model::render(SDL_Renderer* renderer, Player* player)
         currentNode->getInfo()->getVertex2d()->getPos()->setY((int)y2d);
         currentNode = currentNode->getNext();
     }
+    /*VertexNode3D* prevNode = data3d.getFront();
+    currentNode = prevNode->getNext();
+    while (currentNode != nullptr) {
+        SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+        SDL_RenderDrawLine(renderer, SDL3DHelper::convertPosR(*currentNode->getInfo()->getVertex2d()->getPos()).getX(), SDL3DHelper::convertPosR(*currentNode->getInfo()->getVertex2d()->getPos()).getY(), SDL3DHelper::convertPosR(*prevNode->getInfo()->getVertex2d()->getPos()).getX(), SDL3DHelper::convertPosR(*prevNode->getInfo()->getVertex2d()->getPos()).getY());
+        prevNode = currentNode;
+        currentNode = currentNode->getNext();
+    }*/
     //FaceStack facesSorted;
     //FaceNode* currentFace = facesData.getFront();
     //while (currentFace != nullptr) {
@@ -154,7 +163,7 @@ void Model::render(SDL_Renderer* renderer, Player* player)
             SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
         }
         color = ~color;
-        SDL3DHelper::renderFillFace(renderer, *currentNodeRender->getInfo()->getFront());
+        //SDL3DHelper::renderFillFace(renderer, *currentNodeRender->getInfo()->getFront());
         currentNodeRender = currentNodeRender->getNext();
     }
 }
@@ -233,13 +242,17 @@ Model::Model(const char* objname, Pos* pos, float size, Color* color, const char
     FaceStack faces;
     
     for(std::vector<int> k : facest) {
+        int count = 0;
         Face2 face;
+        //std::cout << face.getSize() << std::endl;
         for (int index : k) {
             VertexNode3D* currentNodeInner = data3d.getFront();
             for (int i = 0; i < index; i++) {
                 currentNodeInner = currentNodeInner->getNext();
             }
             face.add(new VertexNode3DNode(currentNodeInner));
+            count++;
+            //std::cout << count << ":" << face.getSize() << std::endl;
             face.getLast()->connections = currentNodeInner->getInfo()->connections;
         }
         faces.add(new FaceNode(face));
@@ -274,6 +287,11 @@ int Model::getObjectType()
 FaceStack* Model::getFaces()
 {
     return &facesData;
+}
+
+Pos* Model::getPos()
+{
+    return this->pos;
 }
 
 std::vector<std::string> Model::splitString(const std::string& str, const char* delimiter) {

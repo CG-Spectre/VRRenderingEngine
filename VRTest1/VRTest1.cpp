@@ -27,20 +27,34 @@ int main(int argc, char* argv[]) {
     Sky sky(&skyColor);
     RenderNode skyNode(&sky);
     Pos cubePos(0, -0.5, 5, 0, 0, 0);
-    Pos prismPos(0, -0.5, 7, 0, 0, 0);
+    Pos planePos(0, 0, 7, 0, 0, 0);
     Color cubeColor(255, 255, 255, 255);
     Cube cube(&cubePos, 1, &cubeColor);
     RenderNode cubenode(&cube);
     RenderStack renderStack(&skyNode);
-    Model prismModel = Model("cube", & cubePos, 2, &cubeColor, "prism");
-    Model cubeModel = Model("triangularPrism", &prismPos, 2, &cubeColor, "cube");
-    RenderNode modelnode(&cubeModel);
-    RenderNode modelnode2(&prismModel);
-    LightRaySource light(Pos(0, 5, 0.0));
+    Model planeModel = Model("plane", & planePos, 2, &cubeColor, "plane");
+    //Model cubeModel = Model("triangularPrism", &cubePos, 2, &cubeColor, "cube");
+    //RenderNode modelnode(&cubeModel);
+    RenderNode modelnode2(&planeModel);
+   // LightRaySource light(Pos(1, 7, 7.5, 0, 90, 0));
     
-    renderStack.add(&modelnode);
+    LightRaySource light2(Pos(0.5, 7, 6.5, 0, 90, 0));
+    LightRaySource light3(Pos(0.5, 7, 8.5, 0, 90, 0));
+    LightRaySource light4(Pos(0.5, 7, 7.5, 0, 90, 0));
+    LightRaySource light5(Pos(-0.5, 7, 7.5, 0, 90, 2));
+    LightRaySource light6(Pos(1.5, 7, 7.5, 0, 90, -2));
+    //LightRaySource light3(Pos(1, 7, 7.5, 0, 80, 0));
+    
+    ///renderStack.add(&modelnode);
     renderStack.add(&modelnode2);
-    renderStack.add(new RenderNode(&light));
+    //renderStack.add(new RenderNode(&light));
+    renderStack.add(new RenderNode(&light2));
+    renderStack.add(new RenderNode(&light3));
+    renderStack.add(new RenderNode(&light4));
+    renderStack.add(new RenderNode(&light5));
+    renderStack.add(new RenderNode(&light6));
+    
+    //renderStack.add(new RenderNode(&light3));
     // Initialize SDL
     if (SDL_Init(SDL_INIT_VIDEO) != 0) {
         SDL_Log("Unable to initialize SDL: %s", SDL_GetError());
@@ -98,6 +112,9 @@ int main(int argc, char* argv[]) {
     while (running) {
         int dt = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count() - time;
         time += dt;
+        float diff = 9;
+        //light2.getPos()->setPitch(90 + (std::sin((float)time/1000) + 1) * (diff / 2));
+        //light2.getPos()->setRoll((std::sin((float)time / 1000)) * (diff / 2));
         // Event handling
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_QUIT) {
@@ -177,6 +194,7 @@ int main(int argc, char* argv[]) {
         if (state[SDL_SCANCODE_LSHIFT]) {
             player.getPos()->setY(*player.getPos()->getY() - movement * dt);
         }
+        //std::cout << "(" << *player.getPos()->getX() << ", " << *player.getPos()->getY() << ", " << *player.getPos()->getZ() << ")" << std::endl;
         /*float dx = 0;
                 float dz = 0;
                 if (strcmp(keyName, "W") == 0) {
@@ -222,6 +240,7 @@ int main(int argc, char* argv[]) {
                 ((LightRaySource*)currentNode->getInfo())->render(renderer, &player, &renderStack);
             }
             else {
+                //std::cout << "rendering" << std::endl;
                 currentNode->getInfo()->render(renderer, &player);
             }
             if (currentNode->getLink() == nullptr) {

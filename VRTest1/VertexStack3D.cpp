@@ -28,6 +28,7 @@ void VertexStack3D::add(VertexNode3D* node)
 	last->setNext(node);
 	node->setPrevious(last);
 	last = last->getNext();
+	size++;
 }
 
 void VertexStack3D::remove(VertexNode3D* node) {
@@ -45,6 +46,7 @@ void VertexStack3D::remove(VertexNode3D* node) {
 		}
 		return;
 	}
+	size--;
 	node->getPrevious()->setNext(node->getNext());
 }
 
@@ -61,4 +63,8 @@ VertexNode3D* VertexStack3D::getLast()
 void VertexStack3D::render(SDL_Renderer* renderer)
 {
 	std::cout << "Cannot render a 3D vertex stack directly!" << std::endl;
+}
+
+int VertexStack3D::getSize() {
+	return size;
 }

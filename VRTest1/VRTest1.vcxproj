@@ -143,6 +143,7 @@ SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Pos.cpp" />
     <ClCompile Include="Pos2D.cpp" />
+    <ClCompile Include="Quaternion.cpp" />
     <ClCompile Include="RenderableObject.cpp" />
     <ClCompile Include="RenderNode.cpp" />
     <ClCompile Include="RenderStack.cpp" />
@@ -169,6 +170,7 @@ SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     <ClInclude Include="Player.h" />
     <ClInclude Include="Pos.h" />
     <ClInclude Include="Pos2D.h" />
+    <ClInclude Include="Quaternion.h" />
     <ClInclude Include="RenderableObject.h" />
     <ClInclude Include="RenderNode.h" />
     <ClInclude Include="RenderStack.h" />

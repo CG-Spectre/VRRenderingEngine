@@ -1,3 +1,39 @@
 ﻿  SDL3DHelper.cpp
 C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.h(8,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\optional(11): warning STL4038: The contents of <optional> are available only with C++17 or later.
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(143,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(144,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(145,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(146,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(147,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(148,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(163,7): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(168,30): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(168,20): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(194,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(195,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(196,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(197,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(198,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(199,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(230,7): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(264,8): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(282,8): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(323,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(324,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(325,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(326,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(327,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(328,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(356,9): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(361,17): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(368,47): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(368,76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(369,47): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(369,79): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(370,47): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(370,81): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(374,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\aidan\source\repos\VRTest1\VRTest1\SDL3DHelper.cpp(374,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   VRTest1.vcxproj -> C:\Users\aidan\source\repos\VRTest1\x64\Debug\VRTest1.exe

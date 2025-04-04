@@ -16,6 +16,7 @@ void LightRaySource::render(SDL_Renderer* renderer, Player* player, RenderStack*
 {
     RenderNode* currentNode = renderStack->getFront();
     while (currentNode != nullptr) {
+       
         bool skip = false;
         for (int i : renderBlackList) {
             if (i == currentNode->getInfo()->getObjectType()) {
@@ -31,4 +32,9 @@ void LightRaySource::render(SDL_Renderer* renderer, Player* player, RenderStack*
         //std::cout << currentNode->getInfo() << std::endl;
         currentNode = currentNode->getLink();
     }
+}
+
+Pos* LightRaySource::getPos()
+{
+    return &this->pos;
 }

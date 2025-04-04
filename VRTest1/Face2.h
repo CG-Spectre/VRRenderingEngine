@@ -10,8 +10,10 @@ class Face2
 		VertexNode3DNode* getFront();
 		VertexNode3DNode* getLast();
 		float average;
+		int getSize();
 	private:
 		VertexNode3DNode* front;
 		VertexNode3DNode* last;
+		int size;
 };
 

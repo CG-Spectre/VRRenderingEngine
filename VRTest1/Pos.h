@@ -19,6 +19,7 @@ class Pos
 		float* getYaw();
 		float* getPitch();
 		float* getRoll();
+		Vector3 getAsVector3();
 		Vector3 getNormalizedRotation();
 	private:
 		float x;

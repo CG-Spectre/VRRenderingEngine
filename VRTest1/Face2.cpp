@@ -1,7 +1,7 @@
 #include "Face2.h"
 #include <iostream>
 
-Face2::Face2()
+Face2::Face2() : size(0)
 {
     this->front = nullptr;
     this->last = nullptr;
@@ -12,12 +12,15 @@ void Face2::add(VertexNode3DNode* node)
 	if (front == nullptr) {
 		this->front = node;
 		this->last = this->front;
+		size++;
 		return;
 	}
 	last->setNext(node);
 	node->setPrevious(last);
 	last = node;
 	//std::cout << (last->getNext() == nullptr) << std::endl;
+	size++;
+	//std::cout << size << std::endl;
 }
 
 void Face2::remove(VertexNode3DNode* node)
@@ -37,6 +40,7 @@ void Face2::remove(VertexNode3DNode* node)
 		return;
 	}
 	node->getPrevious()->setNext(node->getNext());
+	//size--;
 }
 
 VertexNode3DNode* Face2::getFront()
@@ -47,4 +51,9 @@ VertexNode3DNode* Face2::getFront()
 VertexNode3DNode* Face2::getLast()
 {
 	return this->last;
+}
+
+int Face2::getSize()
+{
+	return this->size;
 }

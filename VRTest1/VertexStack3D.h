@@ -11,8 +11,10 @@ class VertexStack3D
 		VertexNode3D* getFront();
 		VertexNode3D* getLast();
 		void render(SDL_Renderer* renderer);
+		int getSize();
 	private:
 		VertexNode3D* front;
 		VertexNode3D* last;
+		int size = 0;
 };
 

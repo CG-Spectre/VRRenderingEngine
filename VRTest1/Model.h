@@ -12,6 +12,7 @@ class Model : public RenderableObject
 		Model(const char* objectname, Pos* pos, float size, Color* color, const char* modelname);
 		int getObjectType() override;
 		FaceStack* getFaces();
+		Pos* getPos();
 	private:
 		std::vector<std::string> splitString(const std::string& str, const char* delimiter);
 		Pos* pos;
